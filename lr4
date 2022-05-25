@@ -1,5 +1,10 @@
 1. Порахувати всі проекти у сховищі, що написані мовою c#.
+> db.InfoRepository.find({Language:"C#"}).count()
 2. Вивести проекти, які додані останнього місяця або написані мовою с++. 
+> db.InfoRepository.find({$or:[{DateAdd:{$gt:1653451391}},{Language:"C++"}]})
 3. Вивести всі проекти, які використовують СУБД SQL Server або додані  останнього року. 
+> db.InfoRepository.find({$or:[{DateAdd:{$gt:1653451391}},{DataBase:"SQL Server"}]}).pretty()
 4. Самостійно скласти запити для виведення інформації із масивів. 
+db.InfoRepository.find({RepOwnName:{$all:["Andriy","Viktor"]}},{RepName:1}).pretty()
+db.InfoRepository.find({Language:"C#"},{RepName:1}).pretty()
 
