@@ -1,2 +1,0 @@
-db.users.createIndex({email:1})
-db.users.getIndexes()
