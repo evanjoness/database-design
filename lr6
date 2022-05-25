@@ -1,0 +1,3 @@
+user1=db.users.insertOne({name:"Ivan",surname:"Shpytchuk", password:"1234",email:"shpytchuk@gmail.com"})
+repository1=db.repositories.insertOne({title:"First", DateAdd:"20.04.2022",Language:"C#", RepOwner:{$ref:"users", $id:user1.insertedId}})
+db.users.updateOne({name:"Ivan"},{$set:{repositories:[{$ref:"repositories",$id: repository1.insertedId}]}})
