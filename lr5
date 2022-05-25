@@ -1,7 +1,13 @@
+ 1. replaceOne() 
  db.InfoRepository.replaceOne({RepName:"Chess"},{RepName:"Shakhmaty"})
+ 2.updateOne() 
  db.InfoRepository.updateOne({Language:"C++",RepName:"Maps"},{$set:{Language:"JavaScript"}})
+ 3. $push 
  db.InfoRepository.updateOne({RepID:3},{$push:{RepOwnName:"Valeriy"}})
+ 4. $addToSet 
  db.InfoRepository.updateOne({RepID:3},{$addToSet:{RepOwnName:"Valeriy"}})
+ 5. deleteOne() 
  db.InfoRepository.deleteOne({RepID:3})
+ 6. drop()
  db.InfoRepository.drop()
- db.dropDatabase()
+ 7. db.dropDatabase()
